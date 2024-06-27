@@ -161,7 +161,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(18, 110, 212);;
+    background-color: rgb(139, 0, 0); /*  rgb(47, 79, 79) rgb(0, 0, 128) */
     height: 100vh;
     width: 25%;
 }
@@ -197,6 +197,51 @@ header{
     background-size: cover;
     background-position: calc(50% + 20px) center;
     background-repeat: no-repeat;
+}
+
+#about{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+#about-l{
+    background-color: rgb(35, 35, 35);
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    justify-content: start;
+    padding-left: 5%;
+}
+#about-l h1{
+    position: absolute;
+    top: 23%;
+    padding-left: 10px;
+}
+#about-l .p-box{
+    position: absolute;
+    top: 28%;
+    height: 55%;
+    width: 45%;
+}
+#about-l .p-box p{
+    color: rgb(200, 200, 200);
+    padding: 10px;
+    font-size: 14px;
+}
+#about-r{
+    position: relative;
+    width: 40%;
+    height: 100vh;
+    background-color: rgb(35, 35, 35);
+}
+#about-r img{
+    position: absolute;
+    top: 65px;
+    width: 100%;
+    height: 100vh;
 }
 
 /* Media Query for Phones */
