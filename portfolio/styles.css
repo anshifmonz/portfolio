@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    color: #fffbf7;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+}
+#nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 18px;
+}
+#nav-bar ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+#nav-bar ul li {
+    list-style: none;
+}
+#nav-bar ul li a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: .4s;
+}
+#nav-bar a:hover{
+    color: aqua;
+}
+
+#home{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    color: whitesmoke;
+}
+#home-left{
+    display: flex;
+    align-items: center;
+    width: 75%;
+    height: 100vh;
+    background-color: rgb(35, 35, 35);
+}
+#l-content{
+    padding-left: 10%;
+    font-size: large;
+    max-width: 600px;
+}
+#l-content h1{
+    font-size: 3rem;
+}
+#l-content h3{
+    font-size: 2rem;
+    color: rgb(0, 187, 238);
+}
+#l-content p{
+    margin-top: 8px;
+}
+#l-content > #btn-div{
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 275px;
+    height: 35px;
+}
+#l-content button{
+    width: 120px;
+    height: 100%;
+    border-radius: 8px;
+    transition: .3s;
+    border: 2px solid rgb(0, 187, 238);
+}
+#l-content button a{
+    text-decoration: none;
+    font-size: normal;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.hire{
+    background-color: transparent;
+    transition: .3s;
+}
+.hire a{
+    color: rgb(0, 187, 238);
+    transition: .3s;
+}
+.talk{
+    background-color: rgb(0, 187, 238);
+}
+.talk a{
+    color: rgb(35, 35, 35);
+}
+.hire:hover {
+    background-color: rgb(0, 187, 238);
+}
+
+.hire:hover a {
+    color: rgb(35, 35, 35);
+}
+.talk:hover{
+    background-color: rgb(35, 35, 35);
+}
+.talk:hover a{
+    color: rgb(0, 187, 238);
+}
+#l-content .social-icons{
+    display: flex;
+    justify-content: space-around;
+    width: 275px;
+    height: 40px;
+    margin-top: 20px;
+}
+#l-content .social-icons a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icons i{
+    font-size: 25px;
+}
+#l-content .social-icons i:hover {
+    color: transparent;
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80); /* Apply gradient as background */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#l-content .social-icons .fa-twitter:hover {
+    background: linear-gradient(45deg, #1DA1F2, #1A91DA, #197FCB, #1866B8, #175496);
+    background-clip: text;
+}
+
+#l-content .social-icons .fa-telegram:hover {
+    background: linear-gradient(45deg, #37AEE2, #1E96C8);
+    background-clip: text;
+}
+
+#l-content .social-icons .fa-linkedin-in:hover {
+    background: linear-gradient(45deg, #0077B5, #0A66C2);
+    background-clip: text;
+}
+
+
+#home-right{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(18, 110, 212);;
+    height: 100vh;
+    width: 25%;
+}
+
+#home-right .circle{
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translate(-60%, -50%);
+    border-radius: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#home-right .circle-a {
+    width: 410px;
+    height: 410px;
+    background-color: #232323;
+}
+#home-right .circle-b {
+    width: 370px;
+    height: 370px;
+    position: absolute;
+    left: 42px;
+    border: 8px solid rgba(255, 255, 255, 0.7);
+    background-color: #232323;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: inset 0px 0px 15px 10px #3877ff, 0px 0px 30px 10px #3877ff;
+    background-image: url('./assets/img/profile.png');
+    background-size: cover;
+    background-position: calc(50% + 20px) center;
+    background-repeat: no-repeat;
+}
+
+/* Media Query for Phones */
+@media (max-width: 768px) {
+    #home {
+        flex-direction: column;
+    }
+
+    #home-left, #home-right {
+        width: 100%;
+        height: 50vh;
+    }
+
+    #nav-bar ul {
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    #l-content {
+        padding-left: 5%;
+        font-size: medium;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    #l-content > #btn-div {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    #l-content button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
