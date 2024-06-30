@@ -8,6 +8,7 @@
 }
 body{
     color: #fffbf7;
+    overflow-x: hidden;
 }
 header{
     position: fixed;
@@ -40,19 +41,15 @@ header{
 #nav-bar a:hover{
     color: aqua;
 }
-body {
-    overflow-x: hidden;
-}
 #home{
     display: flex;
     width: 100vw;
     height: 100vh;
-    color: whitesmoke;
 }
 #home-left{
     display: flex;
     align-items: center;
-    width: 75%;
+    width: 50%;
     height: 100vh;
     background-color: rgb(35, 35, 35);
 }
@@ -163,37 +160,50 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(139, 0, 0); /*  rgb(47, 79, 79) rgb(0, 0, 128) */
+    background-color: rgb(139, 0, 0);
     height: 100vh;
-    width: 25%;
+    width: 50%;
 }
-
-#home-right .circle{
+#home-right #part-1{
+    width: 50%;
+    height: 100vh;
+    background-color: #232323;
+}
+#home-right #part-2{
+    width: 50%;
+    height: 100vh;
+    background-color: rgb(139, 0, 0);
+}
+#circle{
     position: absolute;
-    left: 15%;
-    top: 50%;
-    transform: translate(-60%, -50%);
-    border-radius: 50%;
-    padding: 10px;
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: transparent;
 }
-#home-right .circle-a {
+#circle .circle {
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.circle-a {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     width: 410px;
     height: 410px;
     background-color: #232323;
+    margin: 0;
+    z-index: 1;
 }
-#home-right .circle-b {
+.circle-b {
     width: 370px;
     height: 370px;
-    position: absolute;
-    left: 42px;
-    border: 8px solid rgba(255, 255, 255, 0.7);
     background-color: #232323;
     overflow: hidden;
     z-index: 2;
+    border: 8px solid rgba(255, 255, 255, 0.7);
     box-shadow: inset 0px 0px 15px 10px #3877ff, 0px 0px 30px 10px #3877ff;
     background-image: url('./assets/img/profile.png');
     background-size: cover;
@@ -205,7 +215,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: relative;
     width: 100%;
     height: 100vh;
 }
@@ -214,24 +223,29 @@ body {
     width: 60%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: start;
+    align-items: center;
     padding-left: 5%;
 }
+#about-l div.h1{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
 #about-l h1{
-    position: absolute;
-    top: 23%;
+    margin: 13% 0 0 0;
     padding-left: 10px;
 }
 #about-l .p-box{
-    position: absolute;
-    top: 28%;
-    height: 55%;
-    width: 45%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 #about-l .p-box p{
     color: rgb(200, 200, 200);
     padding: 10px;
-    font-size: 14px;
+    font-size: 18px;
 }
 #about-r{
     position: relative;
@@ -306,7 +320,6 @@ body {
     margin-top: 20px;
 }
 
-
 #contact{
     display: flex;
     height: 100vh;
@@ -352,7 +365,6 @@ body {
     text-align: center;
 }
 .container-r{
-    /* background-color: green; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -367,11 +379,8 @@ body {
     display: flex;
     align-items: end;
     margin-bottom: 24px;
-    
-    /* background-color: blueviolet; */
 }
 div.form{
-    /* background-color: blueviolet; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -411,13 +420,252 @@ div.form button {
     width: 80%;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: rgb(11, 62, 137);
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
 }
 div.form button:hover {
     background-color: #0056b3;
+}
+
+/* Responsive */
+@media (max-width: 1053px) {
+    #l-content h1{
+        font-size: 2.5rem;
+    }
+    #l-content h3{
+        font-size: 1.6rem;
+        color: rgb(0, 187, 238);
+    }
+    #l-content p{
+        font-size: 16px;
+        margin-top: 8px;
+    }
+    .circle-a {
+        left: 10px;
+        width: 380px;
+        height: 380px;
+    }
+    
+    .circle-b {
+        width: 340px;
+        height: 340px;
+    }
+
+    #contact-l img{
+        width: 40vw;
+    }
+    .container-r .hedding{
+        margin-bottom: 34px;
+    }
+}
+@media (max-width: 975px) {
+    #about-l .p-box p{
+        font-size: 14px;
+    }
+}
+@media (max-width: 890px) {
+    #l-content h1{
+        font-size: 2rem;
+    }
+    #l-content h3{
+        font-size: 1.7rem;
+        color: rgb(0, 187, 238);
+    }
+    #l-content p{
+        font-size: 13px;
+    }
+    .circle-a {
+        width: 380px;
+        height: 380px;
+    }
+    
+    .circle-b {
+        width: 340px;
+        height: 340px;
+    }
+
+
+    .vertical-text {
+        gap: 2px;
+        font-size: 15px;
+        line-height: 1;
+        font-weight: bold;
+    }
+    .container-r .hedding{
+        height: 50%;
+        width: 76%;
+        font-size: larger;
+        margin-bottom: -20px;
+    }
+    div.form{
+        width: 100%;
+        height: 80%;
+    }
+    .container-r form{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 50px;
+        overflow: hidden;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 10px;
+    }
+    div.form button {
+        width: 50%;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    #nav-bar ul{
+        width: 60%;
+        justify-content: space-evenly;
+    }
+
+    #home{
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+    }
+    #home-left{
+        justify-content: start;
+        align-items: end;
+        width: 100vw;
+        height: 50vh;
+    }
+    #home-left #l-content{
+        margin-bottom: 50px;
+    }
+    #l-content h1{
+        font-size: 2rem;
+    }
+    #l-content h3{
+        font-size: 1.5rem;
+        color: rgb(0, 187, 238);
+    }
+    #l-content p{
+        margin-top: 8px;
+    }
+    #home-right{
+        flex-direction: column;
+        width: 100vw;
+        height: 50vh;
+    }
+    #home-right #part-1{
+        width: 100vw;
+        height: 30vh;
+        background-color: rgb(139, 0, 0);
+    }
+    #home-right #part-2{
+        width: 100vw;
+        height: 30vh;
+        background-color: #232323;
+    }
+    #circle{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+    }
+    #circle .circle {
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+    .circle-a {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 270px;
+        height: 270px;
+        background-color: #232323;
+        margin: 0;
+        z-index: 1;
+    }
+    .circle-b {
+        width: 230px;
+        height: 230px;
+        background-color: #232323;
+        overflow: hidden;
+        z-index: 2;
+        border: 8px solid rgba(255, 255, 255, 0.7);
+        box-shadow: inset 0px 0px 15px 10px #3877ff, 0px 0px 30px 10px #3877ff;
+        background-image: url('./assets/img/profile.png');
+        background-size: cover;
+        background-position: calc(50% + 20px) center;
+        background-repeat: no-repeat;
+    }
+
+    #about{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    #about-r{
+        order: 1;
+        width: 100%;
+        height: 30vh;
+    }
+    #about-r img{
+        width: 100%;
+        height: 100%;
+    }
+    #about-l{
+        order: 2;
+        width: 100%;
+    }
+    #about-l h1{
+        margin: 17% 0 0 0;
+    }
+
+    #contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    #contact-l{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30vh;
+        width: 100vw;
+        margin-top: 170px;
+        background-color: transparent;
+    }
+    #contact-l img{
+        width: 100%;
+    }
+    #contact-r{
+        flex-direction: column;
+        height: 70vh;
+        width: 100vw;
+    }
+    #contact-r .container-l{
+        height: 0%;
+    }
+    .vertical-text {
+        position: absolute;
+        color: transparent;
+    }
+    #contact-r .container-r{
+        height: 100%;
+    }
+    .container-r .hedding{
+        height: 10%;
+        margin-bottom: -45px;
+    }
+    div.form{
+        width: 100%;
+        height: 90%;
+        padding: 20px;
+    }
 }
