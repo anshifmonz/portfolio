@@ -1,17 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Righteous&display=swap');
+
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px 70px;
+  padding: 20px 70px 20px 100px;
   z-index: 100;
   background-color: transparent;
   border-bottom: 1.5px solid var(--nav-border);
 }
+nav span {
+  font-family: 'Righteous', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  color: var(--text);
+}
+nav .navigations {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
 nav a{
   color: var(--text);
+  font-weight: 600;
   text-decoration: none;
-  padding: 0 30px;
   transition: .4s;
 }
 nav a:hover{
