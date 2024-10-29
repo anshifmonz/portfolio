@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 70px;
+  z-index: 100;
+  background-color: transparent;
+  border-bottom: 1.5px solid var(--nav-border);
+}
+nav a{
+  color: var(--text);
+  text-decoration: none;
+  padding: 0 30px;
+  transition: .4s;
+}
+nav a:hover{
+  color: var(--accent);
+}
