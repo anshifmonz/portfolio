@@ -1,0 +1,75 @@
+section.portfolio {
+  padding: 0 200px 0 200px;
+}
+.portfolio > .heading {
+  margin-bottom: 50px;
+}
+.portfolio .container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.portfolio .project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.portfolio .project div {
+  width: 50%;
+}
+.portfolio .card {
+  height: 350px;
+  border-radius: 12px;
+  background-color: lightblue;
+}
+.portfolio .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 40px;
+  padding: 20px 32px;
+}
+.portfolio .details div {
+  width: 100%;
+}
+.portfolio .details .text .heading {
+  margin-bottom: 16px;
+}
+.portfolio .details .tags {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+.portfolio .details .tags span {
+  background-color: #cecece;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.portfolio .details p {
+  line-height: 1.3;
+}
+.portfolio .details .links {
+  display: flex;
+  justify-content: start;
+  align-content: center;
+  gap: 20px;
+}
+.portfolio .details .links * {
+  text-decoration: none;
+  color: var(--text);
+  height: 100%;
+}
+.portfolio .details .links a:nth-child(2) {
+  margin-top: 4px;
+  font-weight: 600;
+}
+.portfolio .details .links a:nth-child(2):hover {
+  color: var(--accent);
+}
+.portfolio .details .links i {
+  font-size: 32px;
+}
