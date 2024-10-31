@@ -52,11 +52,11 @@
 }
 .talk{
   background-color: var(--accent);
-  color: var(--text);
+  color: var(--accent-text);
 }
 .hire:hover {
   background-color: var(--accent);
-  color: var(--text);
+  color: var(--accent-text);
 }
 .talk:hover{
   background-color: transparent;
