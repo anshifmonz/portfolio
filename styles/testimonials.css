@@ -1,0 +1,32 @@
+section.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+  gap: 32px;
+  text-align: center;
+}
+.testimonials p {
+  font-size: 22px;
+  font-weight: 600;
+  width: 70%;
+}
+.testimonials .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  text-align-last: left;
+}
+.testimonials .profile .details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-right: 40px;
+  border-right: 2.5px solid #000;
+}
+.testimonials .logo h1 {
+  font-family: 'Jaini Purva';
+}
