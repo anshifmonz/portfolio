@@ -1,0 +1,46 @@
+section.services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0 80px;
+  margin: 100vh 0;
+}
+
+.services .heading {
+  display: flex;
+  gap: 20px;
+}
+.services .heading > * {
+  width: 50%;
+}
+
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 20px;
+}
+.services .container .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 28px 14px;
+  height: 230px;
+  width: 380px;
+  border-radius: 12px;
+}
+.services .card .icon {
+  height: 100px;
+}
+.services .card svg {
+  width: 80px;
+  height: 100px;
+}
+.services .card.e-commerce svg {
+  height: 60px;
+  width: 80px;
+  margin-bottom: -65px;
+}
