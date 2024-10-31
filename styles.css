@@ -6,6 +6,7 @@
 @import url('./styles/skills.css');
 @import url('./styles/services.css');
 @import url('./styles/testimonials.css');
+@import url('./styles/cta.css');
 @import url('./styles/contact.css');
 
 * {
@@ -21,6 +22,7 @@
   --primary: #461281;
   --secondary: #ea79ec;
   --accent: #c01b9a;
+  --accent-text: #fff;
   
   --nav-border: rgba(253, 0, 0, 0.1);
 }
@@ -30,6 +32,7 @@
   --primary: #b07cec;
   --secondary: #841386;
   --accent: #e441bf;
+  --accent-text: #fff;
 
   --nav-border: rgba(45, 24, 112, 0.6);
 }

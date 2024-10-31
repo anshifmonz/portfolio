@@ -1,0 +1,36 @@
+section.cta {
+  margin-top: 100px;
+  padding: 0 80px;
+}
+
+.cta .heading {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.cta .heading > * {
+  width: 50%;
+}
+.cta .heading p {
+  font-size: 20;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.cta button{
+  width: fit-content;
+  height: fit-content;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--accent-text);
+  border-radius: 8px;
+  border: 2px solid var(--accent);
+  background-color: var(--accent);
+  cursor: pointer;
+  transition: .3s;
+}
+.cta button:hover{
+  background-color: transparent;
+  color: var(--accent);
+}
