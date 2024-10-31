@@ -63,46 +63,6 @@
   color: var(--accent);
 }
 
-#hero .left .social-icons{
-  display: flex;
-  justify-content: space-around;
-  width: 275px;
-  height: 40px;
-  margin-top: 20px;
-}
-#hero .left .social-icons a {
-  text-decoration: none;
-  color: inherit;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-.social-icons i{
-  font-size: 25px;
-}
-#hero .left .social-icons i:hover {
-  color: transparent;
-  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80); /* Apply gradient as background */
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-#hero .left .social-icons .fa-twitter:hover {
-  background: linear-gradient(45deg, #1DA1F2, #1A91DA, #197FCB, #1866B8, #175496);
-  background-clip: text;
-}
-
-#hero .left .social-icons .fa-telegram:hover {
-  background: linear-gradient(45deg, #37AEE2, #1E96C8);
-  background-clip: text;
-}
-
-#hero .left .social-icons .fa-linkedin-in:hover {
-  background: linear-gradient(45deg, #0077B5, #0A66C2);
-  background-clip: text;
-}
-
-
 #hero .right{
   display: flex;
   align-items: center;
