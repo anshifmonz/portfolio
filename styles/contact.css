@@ -45,12 +45,16 @@ section.contact {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  height: 100%;
 } 
 .contact .right .input {
   display: flex;
   justify-content: center;
   gap: 10px;
   align-items: center;
+}
+.contact form > .input-container {
+  flex: 1;
 }
 .input-container {
   position: relative;
@@ -70,6 +74,7 @@ section.contact {
   resize: none;
   border-radius: 16px;
   padding: 10px;
+  height: 100%;
 }
 .floating-input {
   width: 100%;
@@ -96,7 +101,7 @@ section.contact {
   top: 0;
   left: 11px;
   font-size: 0.8em;
-  color: var(--text);
+  color: var(--body-text);
   background: linear-gradient(to bottom, #ded0f3 50%, #fff 50%);
 }
 .contact button {
