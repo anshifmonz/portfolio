@@ -40,3 +40,6 @@ section.services {
   width: 80px;
   height: 100px;
 }
+.services .card svg  * {
+  fill: var(--icons);
+}

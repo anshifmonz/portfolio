@@ -29,6 +29,7 @@
   --accent-border: rgba(192, 27, 154, 0.1);
   --nav-border: rgba(253, 0, 0, 0.1);
   --card-background: #d7cfee;
+  --icons: #010101;
 }
 
 :root[data-theme="dark"] {
@@ -42,6 +43,7 @@
   --accent-border: rgba(228, 65, 191, 0.1);
   --nav-border: rgba(45, 24, 112, 0.6);
   --card-background: #1e0d2a;
+  --icons: #f0f0f0;
 }
 
 /* :root[data-theme="light"] {
