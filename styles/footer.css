@@ -16,6 +16,7 @@ footer .top .logo span {
   font-weight: 400;
   font-size: 25px;
   color: var(--text);
+  cursor: pointer;
 }
 footer .top .navigation {
   display: flex;
@@ -25,8 +26,7 @@ footer .top .navigation {
 }
 footer .top .navigation a {
   text-decoration: none;
-  color: var(--text);
-  font-weight: 500;
+  color: var(--body-text);
 }
 footer .top .navigation a:hover {
   color: rgb(7, 7, 152);
