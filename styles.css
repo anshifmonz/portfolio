@@ -19,6 +19,7 @@
 
 :root[data-theme="light"] {
   --text: #0f051f;
+  --body-text: rgba(25, 24, 37, 0.7);
   --background: #ede4fb;
   --primary: #461281;
   --secondary: #ea79ec;
@@ -30,6 +31,7 @@
 }
 :root[data-theme="dark"] {
   --text: #eadffa;
+  --body-text: rgba(230, 230, 230, 0.85);
   --background: #0d041b;
   --primary: #b07cec;
   --secondary: #841386;
@@ -113,6 +115,9 @@ section > .heading h2 {
 }
 section > .heading p {
   font-size: 18px;
+}
+section p {
+  color: var(--body-text);
 }
 
 

@@ -11,6 +11,7 @@ section.testimonials {
   font-size: 22px;
   font-weight: 600;
   width: 70%;
+  color: var(--text);
 }
 .testimonials .profile {
   display: flex;
