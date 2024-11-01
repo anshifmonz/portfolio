@@ -18,17 +18,17 @@ footer .top .logo span {
   color: var(--text);
   cursor: pointer;
 }
-footer .top .navigation {
+footer .top .navigations {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
-footer .top .navigation a {
+footer .top .navigations a {
   text-decoration: none;
   color: var(--body-text);
 }
-footer .top .navigation a:hover {
+footer .top .navigations a:hover {
   color: rgb(7, 7, 152);
 }
 footer .social-icons {

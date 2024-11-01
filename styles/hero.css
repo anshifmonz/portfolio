@@ -15,14 +15,17 @@
   font-size: large;
   max-width: 600px;
 }
+#hero .left span {
+  font-weight: 500;
+}
 #hero .left h1{
   font-size: 3rem;
-  margin: -12px 0 -12px 0;
+  margin: -10px 0 -8px -2px;
 }
 #hero .left h3{
   font-size: 2rem;
   color: var(--accent);
-  margin-bottom: 15px;
+  margin: 0 0 15px -1px;
 }
 #hero .left p{
   margin-top: 8px;
