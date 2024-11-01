@@ -98,7 +98,6 @@ body{
 main {
   display: flex;
   flex-direction: column;
-  gap: 100px;
 }
 section > .heading {
   text-align: start;
