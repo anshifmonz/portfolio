@@ -24,6 +24,7 @@
   --secondary: #ea79ec;
   --accent: #c01b9a;
   --accent-text: #fff;
+  --accent-border: rgb(192, 27, 154, 0.1);
   
   --nav-border: rgba(253, 0, 0, 0.1);
 }
@@ -34,6 +35,7 @@
   --secondary: #841386;
   --accent: #e441bf;
   --accent-text: #fff;
+  --accent-border: rgb(228, 65, 191, 0.1);
 
   --nav-border: rgba(45, 24, 112, 0.6);
 }

@@ -20,17 +20,17 @@ section.services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  column-gap: 20px;
+  gap: 20px;
 }
 .services .container .card {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: start;
-  padding: 28px 14px;
-  height: 230px;
-  width: 380px;
+  align-items: center;
+  padding: 28px 18px;
   border-radius: 12px;
+  text-align: center;
+  border: 2px solid var(--accent-border);
 }
 .services .card .icon {
   height: 100px;
@@ -38,9 +38,4 @@ section.services {
 .services .card svg {
   width: 80px;
   height: 100px;
-}
-.services .card.e-commerce svg {
-  height: 60px;
-  width: 80px;
-  margin-bottom: -65px;
 }
