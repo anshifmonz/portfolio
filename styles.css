@@ -85,6 +85,10 @@
   --accent: #b020e1;
 } */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     color: var(--text);
     overflow-x: hidden;
