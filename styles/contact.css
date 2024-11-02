@@ -33,6 +33,31 @@ section.contact {
   font-size: 18px;
   font-weight: 500;
 }
+.contact .promises {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact .promises div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.contact .promises span {
+  color: var(--body-text);
+  font-weight: 600;
+}
+.contact .promises svg, .contact .promises path {
+  min-height: 20px !important;
+  min-width: 20px !important;
+  max-height: 20px !important;
+  max-width: 20px !important;
+  fill: green;
+}
+.contact .social-icons {
+  margin-top: 0;
+}
 
 .contact .right {
   height: 300px;
