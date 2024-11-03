@@ -5,8 +5,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
   padding: 0 80px;
+  margin: 10vh 0;
 }
 #about p {
   font-family: 'Jaini Purva';
@@ -16,4 +16,128 @@
   line-height: 84px;
   text-align: center;
   color: var(--text);
+}
+#about p br.brr {
+  display: none;
+}
+
+@media (min-width: 1440px) {
+  #about {
+    max-width: 1440px;
+    margin: 10vh auto;
+  }
+}
+@media (min-width: 1300px) {
+  #about p {
+    font-size: 64px !important;
+  }
+}
+@media (max-width: 1180px) {
+  #about {
+    padding: 0 60px;
+  }
+  #about p {
+    font-size: 56px;
+  }
+}
+@media (max-width: 1069px) {
+  #about {
+    padding: 50px;
+  }
+  #about p {
+    font-size: 54px;
+  }
+}
+@media (max-width: 1015px) {
+  #about {
+    padding: 40px;
+  }
+  #about p {
+    font-size: 52px;
+    line-height: 74px;
+  }
+}
+@media (max-width: 961px) {
+  #about {
+    padding: 40px;
+  }
+  #about p {
+    font-size: 50px;
+  }
+}
+@media (max-width: 926px) {
+  #about {
+    padding: 30px;
+  }
+  #about p {
+    font-size: 48px;
+  }
+}
+@media (max-width: 872px) {
+  #about {
+    padding: 25px;
+  }
+  #about p {
+    font-size: 46px;
+  }
+}
+@media (max-width: 829px) {
+  #about {
+    padding: 20px;
+  }
+  #about p {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}
+@media (max-width: 752px) {
+  #about {
+    padding: 10px;
+  }
+  #about p {
+    font-size: 38px;
+  }
+}
+@media (max-width: 664px) {
+  #about {
+    padding: 0px;
+  }
+  #about p {
+    font-size: 34px;
+    line-height: 54px;
+  }
+}
+@media (max-width: 590px) {
+  #about p {
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+@media (max-width: 550px) {
+  #about p {
+    font-size: 28px;
+  }
+}
+@media (max-width: 485px) {
+  #about p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 425px) {
+  #about p br {
+    display: none;
+  }
+  #about p br.brr {
+    display: block;
+  }
+}
+@media (max-width: 360px) {
+  #about p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 326px) {
+  #about p br.brr {
+    display: none;
+  }
 }
