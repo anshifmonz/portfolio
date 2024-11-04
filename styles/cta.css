@@ -89,6 +89,7 @@ section.cta {
 @media (max-width: 768px) {
   section.cta {
     padding: 0 10px;
+    margin-top: 120px;
   }
   .cta .heading {
     flex-direction: column;
