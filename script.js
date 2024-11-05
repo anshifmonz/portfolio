@@ -1,12 +1,10 @@
 // faq
-const question = document.querySelectorAll('section.faq .item > p');
-question.forEach(ele => ele.addEventListener('click', e => toggleAnswer(e)))
-
 function toggleAnswer(button) {
-  const answer = button.nextElementSibling;
-  if (answer.style.display === 'block') return answer.style.display = 'none';
-  answer.style.display = 'block';
+  const answer = button.nextElementSibling;  
+  answer.classList.toggle('visible');
 }
+const questions = document.querySelectorAll('section.faq .item > p');
+questions.forEach(ele => ele.addEventListener('click', () => toggleAnswer(ele)));
 
 // contact form
 const form = document.querySelector('#contact form');

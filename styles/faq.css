@@ -55,6 +55,9 @@ section.faq {
   margin-top: 5px;
   font-size: 1.1rem;
 }
+.faq .answer.visible {
+  display: block;
+}
 
 @media (min-width: 1440px) {
   section.faq {
