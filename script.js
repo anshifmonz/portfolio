@@ -36,7 +36,7 @@ async function submitForm (e) {
   let messageElement = '';
 
   try {
-    const response = await fetch('https://formspree.io/f/xldejqva', {
+    const response = await fetch('https://formspree.io/f/mgveagne', {
       method: 'POST',
       body: formData,
       redirect: 'manual'
