@@ -146,6 +146,30 @@ section.contact {
   color: var(--accent);
 }
 
+.fixed .success, .fixed .fail {
+  position: fixed;
+  bottom: 10vh;
+  right: 2vw;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  z-index: 200;
+  padding: 16px 18px;
+  width: fit-content;
+  text-align: center;
+}
+.fixed .success *, .fixed .fail * {
+  color: var(--text);
+}
+.fixed .success svg, .fixed .fail svg {
+  height: 40px;
+  width: 40px;
+  font-weight: 600;
+}
+
 @media (min-width: 1440px) {
   section.contact {
     width: 1440px;

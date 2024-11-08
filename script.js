@@ -26,27 +26,37 @@ questions.forEach(ele => ele.addEventListener('click', () => toggleAnswer(ele)))
 
 // contact form
 const form = document.querySelector('#contact form');
+const success = document.querySelector('.fixed .success')
+const fail = document.querySelector('.fixed .fail')
 
-form.addEventListener('submit', async (e) => {
+async function submitForm (e) {
   e.preventDefault();
 
-  const formData = new FormData(form);  
+  const formData = new FormData(form);
+  let messageElement = '';
 
   try {
-    const response = await fetch('https://formspree.io/f/mgveagne', {
+    const response = await fetch('https://formspree.io/f/xldejqva', {
       method: 'POST',
       body: formData,
       redirect: 'manual'
     });
     
     if (response.ok || response.type === 'opaqueredirect') {
-      alert('Message sent successfully!');
+      messageElement = success
       form.reset();
-      return
+    } else {
+      messageElement = fail
     }
-    alert('There was an error sending your message. Please try again.');
   } catch (err) {
     console.error('Error:', err);
-    alert('There was an error sending your message. Please try again.');
+    messageElement = fail
   }
-})
+
+  messageElement.style.display = 'flex';
+  setTimeout(() => {
+    messageElement.style.display = 'none';
+  }, 5000);
+}
+
+form.addEventListener('submit', (e) => submitForm(e))
