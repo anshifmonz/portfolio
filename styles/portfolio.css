@@ -19,13 +19,28 @@ section.portfolio {
 .portfolio .project div {
   width: 50%;
 }
+.portfolio  .project:nth-child(3) .card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.portfolio  .project:nth-child(3) .card img {
+  width: 90%;
+  height: 90%;
+}
 .portfolio .card {
   height: 350px;
   max-width: 400px;
   min-width: 400px;
   border-radius: 12px;
-  background-color: lightblue;
+  overflow: hidden;
 }
+.portfolio .card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
 .portfolio .details {
   display: flex;
   flex-direction: column;
@@ -44,6 +59,7 @@ section.portfolio {
   display: flex;
   justify-content: start;
   align-items: center;
+  flex-wrap: wrap;
   gap: 15px;
 }
 .portfolio .details .tags span {
@@ -56,6 +72,10 @@ section.portfolio {
 .portfolio .details p {
   line-height: 1.3;
 }
+.portfolio .details p a {
+  text-decoration: none;
+  color: rgb(100, 100, 208);
+}
 .portfolio .details .links {
   display: flex;
   justify-content: start;
@@ -67,11 +87,11 @@ section.portfolio {
   color: var(--text);
   height: 100%;
 }
-.portfolio .details .links a:nth-child(2) {
+.portfolio .details .links a.live {
   margin-top: 7px;
   font-weight: 600;
 }
-.portfolio .details .links a:nth-child(2):hover {
+.portfolio .details .links a.live:hover {
   color: var(--accent);
 }
 .portfolio .details .links i {
@@ -167,6 +187,12 @@ section.portfolio {
     height: 350px;
     max-width: 400px;
     min-width: 400px;
+  }
+  .portfolio  .project:nth-child(3) .card {
+    justify-content: center;
+  }
+  .portfolio  .project:nth-child(3) .card img {
+    width: 100%;
   }
   .portfolio .details {
     min-width: 400px;
