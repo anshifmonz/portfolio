@@ -1,0 +1,131 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+
+#about {
+  @apply flex justify-center items-center w-full mx-0 px-20 py-0;
+}
+#about p {
+  @apply not-italic font-normal text-6xl leading-[84px] text-center text-[color:var(--text)];
+  font-family: 'Jaini Purva';
+}
+#about p br.brr {
+  @apply hidden;
+}
+@media (min-width: 1440px) {
+  #about {
+    @apply max-w-[1440px] mx-auto;
+  }
+}
+@media (min-width: 1300px) {
+  #about p {
+    @apply text-[64px];
+  }
+}
+@media (max-width: 1180px) {
+  #about {
+    @apply px-[60px] py-0;
+  }
+  #about p {
+    @apply text-[56px];
+  }
+}
+@media (max-width: 1069px) {
+  #about {
+    @apply p-[50px];
+  }
+  #about p {
+    @apply text-[54px];
+  }
+}
+@media (max-width: 1015px) {
+  #about {
+    @apply p-10;
+  }
+  #about p {
+    @apply text-[52px] leading-[74px];
+  }
+}
+@media (max-width: 961px) {
+  #about {
+    @apply p-10;
+  }
+  #about p {
+    @apply text-[50px];
+  }
+}
+@media (max-width: 926px) {
+  #about {
+    @apply p-[30px];
+  }
+  #about p {
+    @apply text-5xl;
+  }
+}
+@media (max-width: 872px) {
+  #about {
+    @apply p-[25px];
+  }
+  #about p {
+    @apply text-[46px];
+  }
+}
+@media (max-width: 829px) {
+  #about {
+    @apply p-5;
+  }
+  #about p {
+    @apply text-[42px] leading-[64px];
+  }
+}
+@media (max-width: 752px) {
+  #about {
+    @apply p-2.5;
+  }
+  #about p {
+    @apply text-[38px];
+  }
+}
+@media (max-width: 664px) {
+  #about {
+    @apply p-0;
+  }
+  #about p {
+    @apply text-[34px] leading-[54px];
+  }
+}
+@media (max-width: 590px) {
+  #about p {
+    @apply text-[32px] leading-[44px];
+  }
+}
+@media (max-width: 550px) {
+  #about p {
+    @apply text-[28px];
+  }
+}
+@media (max-width: 485px) {
+  #about p {
+    @apply text-2xl;
+  }
+}
+@media (max-width: 425px) {
+  #about p br {
+    @apply hidden;
+  }
+  #about p br.brr {
+    @apply block;
+  }
+}
+@media (max-width: 360px) {
+  #about p {
+    @apply text-[22px];
+  }
+}
+@media (max-width: 326px) {
+  #about p br.brr {
+    @apply hidden;
+  }
+}

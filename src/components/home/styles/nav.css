@@ -1,0 +1,132 @@
+nav {
+  @apply flex justify-between items-center w-full z-[100] bg-transparent border-b-[color:var(--nav-border)] px-[130px] py-5 border-b-[1.5px] border-solid;
+}
+nav span {
+  @apply not-italic font-normal text-[25px] text-[color:var(--text)];
+  font-family: 'Righteous', sans-serif;
+}
+nav .navigations {
+  @apply flex justify-center items-center gap-[50px];
+}
+nav a {
+  @apply text-[color:var(--text)] font-semibold no-underline transition-[0.4s] hover:text-[color:var(--accent)];
+}
+nav #overlay {
+  @apply fixed hidden w-full h-full z-[900] transition-opacity left-0 top-0;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.5);
+}
+nav .drop-down {
+  @apply fixed hidden w-9/12 h-full bg-[color:var(--card-background)] text-[color:var(--text)] z-[1001] px-4 py-8 right-0 top-0;
+  transition: left 0.3s ease;
+}
+nav .drop-down div.close:first-child {
+  @apply absolute right-[50px] top-[15px];
+}
+nav .drop-down div:nth-child(2) {
+  @apply flex items-center flex-col h-[90%] gap-10 mt-[50px];
+  justify-content: start;
+}
+nav .drop-down a {
+  @apply text-center no-underline text-[color:var(--text)] border-b-[color:var(--text)] border-b border-solid hover:text-[color:var(--accent)];
+}
+nav .menu svg {
+  @apply h-10 w-10;
+}
+nav .close svg {
+  @apply h-[35px] w-[35px];
+}
+nav .menu svg path:nth-child(1),
+nav .close svg path {
+  @apply fill-[var(--text)];
+}
+nav .menu,
+nav .close,
+nav .drop-down,
+nav .overlay {
+  @apply hidden;
+}
+nav .drop-down.active {
+  @apply block;
+}
+nav .close.active {
+  @apply block;
+}
+#overlay.active {
+  @apply block opacity-100;
+}
+@media (min-width: 1440px) {
+  nav {
+    @apply max-w-[1440px] mx-auto my-0;
+  }
+}
+@media (min-width: 1315px) {
+  nav {
+    @apply px-[130px] py-5;
+  }
+}
+@media (max-width: 1100px) {
+  nav {
+    @apply px-[70px] py-5;
+  }
+}
+@media (max-width: 998px) {
+  nav {
+    @apply px-[50px] py-5;
+  }
+}
+@media (max-width: 870px) {
+  nav {
+    @apply px-10 py-5;
+  }
+}
+@media (max-width: 810px) {
+  nav {
+    @apply px-[30px] py-5;
+  }
+}
+@media (max-width: 768px) {
+  nav {
+    @apply px-10 py-5;
+  }
+  nav .navigations {
+    @apply gap-5 text-sm;
+  }
+}
+@media (max-width: 620px) {
+  nav span {
+    @apply text-[22px];
+  }
+  nav .navigations a {
+    @apply text-[13px];
+  }
+}
+@media (max-width: 580px) {
+  nav {
+    @apply px-[25px] py-5;
+  }
+}
+@media (max-width: 530px) {
+  nav .navigations {
+    @apply gap-[15px];
+  }
+}
+@media (max-width: 500px) {
+  nav {
+    @apply flex-row-reverse px-[25px] py-3;
+  }
+  nav .navigations {
+    @apply hidden;
+  }
+  nav .menu {
+    @apply block;
+  }
+  nav .close {
+    @apply hidden;
+  }
+}
+@media (max-width: 400px) {
+  nav {
+    @apply px-[5%] py-3;
+  }
+}

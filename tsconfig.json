@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "types": ["node", "jest", "@testing-library/jest-dom", "react", "react-dom"],
+    "target": "ES2020",
+    "lib": ["dom", "dom.iterable", "es2020"],
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictBindCallApply": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "components/*": ["src/components/*"],
+      "hooks/*": ["src/hooks/*"],
+      "lib/*": ["src/lib/*"],
+      "utils/*": ["src/utils/*"],
+      "types/*": ["src/types/*"],
+      "ui/*": ["src/components/ui/*"],
+      "tests/*": ["__tests__/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    ".next",
+    ".build",
+    ".history",
+    "package.json",
+    "tsconfig.json",
+    "next.config.ts",
+    "ui",
+    "__tests__",
+    "scripts"
+  ]
+}

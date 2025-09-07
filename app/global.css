@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Righteous&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --text: #0f051f;
+    --body-text: rgba(25, 24, 37, 0.7);
+    --background: #ede4fb;
+    --primary: #461281;
+    --secondary: #ea79ec;
+    --accent: #c01b9a;
+    --accent-text: #ffffff;
+    --accent-border: rgba(192, 27, 154, 0.1);
+    --nav-border: rgba(253, 0, 0, 0.1);
+    --card-background: #d7cfee;
+    --icons: #010101;
+
+    --font-inter: 'Inter', sans-serif;
+    --font-oxanium: 'Oxanium', sans-serif;
+    --font-jaini-purva: 'Jaini Purva', cursive;
+  }
+
+  .dark {
+    --text: #eadffa;
+    --body-text: rgba(230, 230, 230, 0.85);
+    --background: #0d041b;
+    --primary: #b07cec;
+    --secondary: #841386;
+    --accent: #e441bf;
+    --accent-text: #ffffff;
+    --accent-border: rgba(228, 65, 191, 0.1);
+    --nav-border: rgba(45, 24, 112, 0.6);
+    --card-background: #1e0d2a;
+    --icons: #f0f0f0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text);
+  overflow-x: hidden;
+  background-color: var(--background);
+}
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background-color: var(--background);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 6px;
+  border: 3px solid var(--background);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+section > .heading {
+  text-align: start;
+}
+section > .heading span {
+  font-weight: 600;
+  color: var(--accent);
+}
+section > .heading h2 {
+  margin-top: -6px;
+  font-size: 40px;
+  line-height: 1.2;
+}
+section > .heading p {
+  font-size: 18px;
+}
+section p {
+  color: var(--body-text);
+  font-family: 'Poppins', sans-serif;
+}
+
+h2,
+h3 {
+  font-weight: 700;
+}
+h1,
+h2,
+h3,
+.heading span,
+#hero .left span,
+.navigations a {
+  font-family: 'Oxanium', sans-serif;
+}
+#about > p {
+  font-family: var(--font-jaini-purva);
+}
+.social-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 275px;
+  height: 40px;
+  margin-top: 20px;
+}
+.social-icons a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.social-icons i {
+  font-size: 25px;
+}
+.social-icons i:hover {
+  color: transparent;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d,
+    #f56040,
+    #f77737,
+    #fcaf45,
+    #ffdc80
+  ); /* Apply gradient as background */
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.social-icons .fa-twitter:hover {
+  background: linear-gradient(45deg, #1da1f2, #1a91da, #197fcb, #1866b8, #175496);
+  background-clip: text;
+}
+
+.social-icons .fa-telegram:hover {
+  background: linear-gradient(45deg, #37aee2, #1e96c8);
+  background-clip: text;
+}
+
+.social-icons .fa-linkedin-in:hover {
+  background: linear-gradient(45deg, #0077b5, #0a66c2);
+  background-clip: text;
+}

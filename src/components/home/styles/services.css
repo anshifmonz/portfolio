@@ -1,0 +1,174 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+section.services {
+  @apply flex justify-center items-center flex-col gap-[30px] px-20;
+}
+.services .heading {
+  @apply flex gap-5;
+}
+.services .heading > * {
+  @apply w-6/12;
+}
+.services .container {
+  @apply grid grid-cols-[repeat(3,1fr)] grid-rows-[repeat(2,1fr)] gap-5 p-0;
+}
+.services .container .card {
+  @apply flex flex-col items-center justify-start text-center border-[color:var(--accent-border)] bg-[color:var(--card-background)] px-[18px] py-7 rounded-xl border-2 border-solid;
+}
+.services .card .icon {
+  @apply h-[100px];
+}
+.services .card svg {
+  @apply w-20 h-[100px];
+}
+.services .card svg * {
+  @apply fill-[var(--icons)];
+}
+@media (min-width: 1440px) {
+  section.services {
+    @apply max-w-[1440px] mb-0;
+  }
+}
+@media (min-width: 1380px) {
+  .services .container .card {
+    @apply h-[300px];
+  }
+}
+@media (min-width: 1250px) {
+  .services .container .card {
+    @apply justify-center h-[280px] gap-5;
+  }
+  .services .card h3 {
+    @apply text-2xl;
+  }
+  .services .card p {
+    @apply text-[1.2rem];
+  }
+  .services .card svg {
+    @apply w-[100px] h-[120px];
+  }
+}
+@media (max-width: 1100px) {
+  section.services {
+    @apply p-[50px];
+  }
+}
+@media (max-width: 1025px) {
+  section.services {
+    @apply px-10 py-[50px];
+  }
+}
+@media (max-width: 935px) {
+  .services .container {
+    @apply gap-2.5;
+  }
+  .services .container .card {
+    @apply px-3.5 py-7;
+  }
+  .services .heading h2 {
+    @apply text-[2.3rem];
+  }
+}
+@media (max-width: 890px) {
+  section.services {
+    @apply px-[30px] py-[50px];
+  }
+}
+@media (max-width: 867px) {
+  .services .heading h2 {
+    @apply text-[2rem];
+  }
+}
+@media (max-width: 847px) {
+  .services .container .card {
+    @apply px-3.5 py-5;
+  }
+  .services .container .card h3 {
+    @apply text-[1.1rem];
+  }
+}
+@media (max-width: 810px) {
+  section.services {
+    @apply px-[25px] py-[50px];
+  }
+}
+@media (max-width: 768px) {
+  section.services {
+    @apply px-2.5 py-[50px];
+  }
+  .services .heading {
+    @apply flex-col items-center text-center;
+    justify-content: start;
+  }
+  .services .heading > * {
+    @apply w-full;
+  }
+  .services .container {
+    @apply grid-cols-[repeat(2,1fr)] gap-5 px-2.5 py-0;
+  }
+  .services .container .card {
+    @apply px-[18px] py-7;
+  }
+  .services .container .card h3 {
+    @apply text-[1.3rem];
+  }
+}
+@media (max-width: 675px) {
+  .services .container .card h3 {
+    @apply text-[1.2rem];
+  }
+}
+@media (max-width: 630px) {
+  .services .container {
+    @apply px-[5px] py-0;
+  }
+  .services .container .card {
+    @apply px-3.5 py-5;
+  }
+}
+@media (max-width: 605px) {
+  .services .container {
+    @apply gap-2.5;
+  }
+}
+@media (max-width: 595px) {
+  .services .container .card h3 {
+    @apply text-[1.1rem];
+  }
+}
+@media (max-width: 560px) {
+  .services .container {
+    @apply grid-cols-[1fr];
+  }
+  .services .container .card {
+    @apply w-[350px] px-[18px] py-7;
+  }
+}
+@media (max-width: 425px) {
+  .services .heading p {
+    @apply text-base;
+  }
+}
+@media (max-width: 380px) {
+  .services .container .card {
+    @apply w-80;
+  }
+}
+@media (max-width: 370px) {
+  .services .heading h2 {
+    @apply text-[1.8rem];
+  }
+}
+@media (max-width: 345px) {
+  .services .container .card {
+    @apply w-[300px];
+  }
+}
+@media (max-width: 325px) {
+  .services .heading h2 {
+    @apply text-[1.6rem];
+  }
+}

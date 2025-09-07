@@ -1,0 +1,105 @@
+section.cta {
+  @apply px-20 py-24;
+}
+.cta .heading {
+  @apply flex justify-center items-start;
+}
+.cta .heading > * {
+  @apply w-6/12;
+}
+.cta .heading p {
+  @apply text-xl font-medium mb-5;
+}
+.cta button {
+  @apply w-fit h-fit text-sm font-semibold tracking-[1px] text-[color:var(--accent-text)] border-[color:var(--accent)] bg-[color:var(--accent)] cursor-pointer transition-[0.3s] px-3.5 py-3 rounded-lg border-2 border-solid hover:bg-transparent hover:text-[color:var(--accent)];
+  border-radius: 8px;
+}
+@media (min-width: 1440px) {
+  section.cta {
+    @apply max-w-[1440px] mb-0 mx-auto;
+  }
+}
+@media (min-width: 1335px) {
+  .cta .heading h2 {
+    @apply text-[2.5rem] w-2/5;
+  }
+  .cta .heading {
+    @apply gap-[50px];
+  }
+}
+@media (max-width: 1070px) {
+  section.cta {
+    @apply px-[50px] py-0;
+  }
+}
+@media (max-width: 990px) {
+  .cta .heading {
+    @apply gap-[30px];
+  }
+  .cta .heading h2 {
+    @apply text-[2.4rem];
+  }
+  .cta .heading p {
+    @apply text-lg;
+  }
+}
+@media (max-width: 930px) {
+  section.cta {
+    @apply px-[30px] py-0;
+  }
+  .cta .heading {
+    @apply justify-between;
+  }
+  .cta .heading > * {
+    @apply w-6/12;
+  }
+}
+@media (max-width: 820px) {
+  section.cta {
+    @apply px-5 py-0;
+  }
+  .cta .heading h2 {
+    @apply w-3/5;
+  }
+}
+@media (max-width: 768px) {
+  section.cta {
+    @apply px-2.5 py-0;
+  }
+  .cta .heading {
+    @apply flex-col items-center text-center gap-2.5;
+  }
+  .cta .heading > * {
+    @apply w-full;
+  }
+  .cta .heading h2 {
+    @apply w-full text-[2.5rem];
+  }
+  .cta .heading p {
+    @apply mb-[30px] px-[10%] py-0;
+  }
+}
+@media (max-width: 620px) {
+  .cta .heading h2 {
+    @apply text-[2.2rem];
+  }
+  .cta .heading p {
+    @apply px-[5%] py-0;
+  }
+}
+@media (max-width: 560px) {
+  section.cta {
+    @apply px-[5px] py-0;
+  }
+  .cta .heading h2 {
+    @apply text-[2rem];
+  }
+  .cta .heading p {
+    @apply p-0;
+  }
+}
+@media (max-width: 495px) {
+  .cta .heading h2 {
+    @apply text-[1.9rem];
+  }
+}

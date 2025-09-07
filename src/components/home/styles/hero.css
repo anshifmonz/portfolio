@@ -1,0 +1,212 @@
+#hero {
+  @apply flex items-center justify-between w-screen min-h-[500px] h-[min(calc(100vh_-_65px),fit-content)] px-[100px] pt-[90px];
+}
+#hero .left {
+  @apply flex justify-center items-start flex-col w-6/12 text-[large] max-w-[600px];
+}
+#hero .left span {
+  @apply font-medium;
+}
+#hero .left h1 {
+  @apply text-5xl -ml-0.5 mr-0 -mt-1.5 -mb-2 font-[700];
+}
+#hero .left h3 {
+  @apply text-[2rem] text-[color:var(--accent)] -ml-px mr-0 mt-0 mb-[15px];
+}
+#hero .left p {
+  @apply mt-2;
+}
+#hero .left > #btn-div {
+  @apply inline-flex justify-between w-[275px] h-[38px] mt-5;
+}
+#hero .left button {
+  @apply w-[120px] h-full transition-[0.3s] border-[color:var(--accent)] text-sm font-semibold tracking-[1px] cursor-pointer rounded-lg border-2 border-solid;
+  border-radius: 8px;
+}
+.hire {
+  @apply bg-transparent text-[color:var(--accent)] transition-[0.3s] hover:bg-[color:var(--accent)] hover:text-[color:var(--accent-text)];
+}
+.talk {
+  @apply bg-[color:var(--accent)] text-[color:var(--accent-text)] hover:bg-transparent hover:text-[color:var(--accent)];
+}
+#hero .right {
+  @apply flex items-center justify-center w-fit;
+}
+#circle {
+  @apply flex justify-center items-center bg-transparent z-[3];
+}
+#circle .circle {
+  @apply box-border rounded-[50%];
+}
+.circle-a {
+  @apply flex items-center justify-around w-[410px] h-[410px] bg-transparent z-[1] m-0;
+}
+.circle-b {
+  @apply w-[370px] h-[370px] bg-transparent overflow-hidden z-[2] shadow-[inset_0px_0px_15px_10px_var(--accent),0px_0px_30px_10px_var(--accent)] bg-[url('../../../../public/assets/img/profile.png')] bg-cover bg-[calc(50%_+_20px)_center] bg-no-repeat border-8 border-solid border-[rgba(255,255,255,0.7)];
+}
+@media (min-width: 1440px) {
+  #hero {
+    @apply max-w-[1440px] mx-auto my-0;
+  }
+}
+@media (min-width: 1370px) {
+  #hero .left span {
+    @apply text-[22px] font-semibold;
+  }
+  #hero .left h1 {
+    @apply text-[3.4rem];
+  }
+  #hero .left h3 {
+    @apply text-[2.5rem];
+  }
+  #hero .left p {
+    @apply text-[22px];
+  }
+}
+@media (min-width: 1315px) {
+  #hero {
+    @apply px-[130px] py-[100px];
+  }
+}
+@media (min-width: 1270px) {
+  #hero .left span {
+    @apply text-xl font-semibold;
+  }
+  #hero .left h1 {
+    @apply text-[3.2rem];
+  }
+  #hero .left h3 {
+    @apply text-[2.3rem];
+  }
+  #hero .left p {
+    @apply text-xl;
+  }
+  #hero .left > #btn-div {
+    @apply gap-5 w-fit h-12;
+  }
+  #hero .left button {
+    @apply w-[140px] h-full;
+  }
+  #hero .social-icons {
+    @apply w-[295px];
+  }
+  #circle .circle {
+    @apply scale-[1.06];
+  }
+}
+@media (max-width: 1100px) {
+  #hero {
+    @apply pl-[70px] pr-10 py-0;
+  }
+}
+@media (max-width: 998px) {
+  #hero {
+    @apply pl-[50px] pr-5 py-0;
+  }
+}
+@media (max-width: 925px) {
+  #hero .left h1 {
+    @apply text-[2.5rem];
+  }
+  #hero .left h3 {
+    @apply text-[1.8rem];
+  }
+  #hero .left p {
+    @apply text-base;
+  }
+  #circle .circle {
+    @apply scale-[0.96];
+  }
+}
+@media (max-width: 870px) {
+  #hero {
+    @apply pl-10 pr-2.5 py-0;
+  }
+}
+@media (max-width: 855px) {
+  #hero .right {
+    @apply w-6/12;
+  }
+  #circle .circle {
+    @apply scale-95;
+  }
+}
+@media (max-width: 810px) {
+  #hero {
+    @apply pl-[30px] pr-2.5 py-0;
+  }
+}
+@media (max-width: 768px) {
+  #hero {
+    @apply flex-col px-10 py-0;
+  }
+  #hero .left {
+    @apply w-full items-center text-center pt-[30px];
+  }
+  #hero .left .text {
+    @apply flex flex-col justify-center items-center;
+  }
+  #hero .left p {
+    @apply w-[70%];
+  }
+}
+@media (max-width: 652px) {
+  #hero .left p {
+    @apply w-[90%];
+  }
+}
+@media (max-width: 611px) {
+  #hero .left p {
+    @apply w-[90%];
+  }
+}
+@media (max-width: 524px) {
+  #hero .left p {
+    @apply w-[98%];
+  }
+}
+@media (max-width: 490px) {
+  #hero {
+    @apply px-5 py-0;
+  }
+}
+@media (max-width: 450px) {
+  #hero {
+    @apply px-2.5 py-0;
+  }
+  #hero .left p {
+    @apply w-full;
+  }
+}
+@media (max-width: 420px) {
+  #hero .left p {
+    @apply text-base;
+  }
+  #hero .left span {
+    @apply w-full;
+  }
+}
+@media (max-width: 390px) {
+  #circle .circle {
+    @apply scale-90;
+  }
+}
+@media (max-width: 375px) {
+  #hero .left h1 {
+    @apply text-[2.3rem];
+  }
+  #hero .left h3 {
+    @apply text-[1.6rem];
+  }
+}
+@media (max-width: 350px) {
+  #hero .left h1 {
+    @apply text-[2.1rem];
+  }
+  #hero .left h3 {
+    @apply text-[1.4rem];
+  }
+  #circle .circle {
+    @apply scale-[0.87];
+  }
+}

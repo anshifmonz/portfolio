@@ -1,0 +1,289 @@
+section.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  align-items: center;
+  padding: 80px;
+}
+
+.contact .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  height: 350px;
+  width: 450px;
+}
+.contact .heading {
+  text-align: start;
+}
+.contact .heading span {
+  font-weight: 600;
+  color: var(--accent);
+}
+.contact .heading h2 {
+  margin-top: -6px;
+  font-size: 40px;
+  line-height: 1.2;
+}
+.contact > div p {
+  font-size: 18px;
+  font-weight: 500;
+}
+.contact .promises {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact .promises div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+}
+.contact .promises span {
+  color: var(--body-text);
+  font-weight: 600;
+}
+.contact .promises svg,
+.contact .promises path {
+  min-height: 20px !important;
+  min-width: 20px !important;
+  max-height: 20px !important;
+  max-width: 20px !important;
+  fill: green;
+}
+.contact .social-icons {
+  margin-top: 0;
+}
+
+.contact div.right {
+  height: 350px;
+  width: 450px;
+  min-width: 420px !important;
+  background-color: var(--card-background);
+  padding: 16px;
+  border-radius: 24px;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+}
+.contact .right .input {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+.contact form > .input-container {
+  flex: 1;
+}
+.input-container {
+  position: relative;
+  width: 100%;
+}
+.contact input {
+  flex-grow: 1;
+  height: 50px;
+  border: none;
+  border-radius: 16px;
+  outline: none;
+  padding-left: 10px;
+}
+.contact textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  border-radius: 16px;
+  padding: 10px;
+  height: 100%;
+}
+.floating-input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+.floating-placeholder {
+  top: 0;
+  left: 11px;
+  font-size: 0.8em;
+  color: var(--body-text);
+  background: linear-gradient(to bottom, #ded0f3 50%, #fff 50%);
+}
+section#contact label.floating-placeholder.textarea {
+  top: 9% !important;
+}
+.floating-input:focus + .floating-placeholder,
+.floating-input:not(:placeholder-shown) + .floating-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background: transparent;
+}
+.contact button {
+  height: 50px;
+  border-radius: 100px;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--accent-text);
+  background-color: var(--accent);
+  border: 2px solid var(--accent);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.contact button:hover {
+  background-color: transparent;
+  color: var(--accent);
+}
+
+.fixed .success,
+.fixed .fail {
+  position: fixed;
+  bottom: 10vh;
+  right: 2vw;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  z-index: 200;
+  padding: 16px 18px;
+  width: fit-content;
+  text-align: center;
+}
+.fixed .success *,
+.fixed .fail * {
+  color: var(--text);
+}
+.fixed .success svg,
+.fixed .fail svg {
+  height: 40px;
+  width: 40px;
+  font-weight: 600;
+}
+
+@media (min-width: 1440px) {
+  section.contact {
+    width: 1440px;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1300px) {
+  section.contact div.right {
+    width: 500px;
+    height: 400px;
+  }
+  section.contact div.left {
+    width: 500px;
+    height: 400px;
+  }
+  section.contact div.left h2 {
+    font-size: 2.8rem;
+  }
+  section.contact div.left p {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 1250px) {
+  section.contact div.right {
+    min-width: 470px !important;
+  }
+}
+@media (max-width: 1070px) {
+  section.contact {
+    gap: 70px;
+    padding: 100px 50px;
+  }
+}
+@media (max-width: 970px) {
+  section.contact {
+    gap: 50px;
+  }
+}
+@media (max-width: 930px) {
+  section.contact {
+    gap: 30px;
+    padding: 100px 30px;
+  }
+}
+@media (max-width: 820px) {
+  section.contact {
+    gap: 20px;
+    padding: 100px 20px;
+  }
+}
+@media (max-width: 800px) {
+  .contact div.right {
+    min-width: 390px !important;
+  }
+}
+@media (max-width: 768px) {
+  section.contact {
+    flex-direction: column;
+    padding: 100px 10px;
+  }
+  .contact .left {
+    align-items: center;
+    text-align: center;
+  }
+  .contact .heading {
+    text-align: center;
+  }
+  .contact div.right {
+    min-width: 420px !important;
+  }
+  .contact .promises {
+    align-self: start;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 490px) {
+  .contact div.right {
+    width: 390px;
+    min-width: 390px !important;
+  }
+}
+@media (max-width: 430px) {
+  .contact .left {
+    width: 100%;
+  }
+}
+@media (max-width: 410px) {
+  .contact div.right {
+    width: 350px;
+    min-width: 350px !important;
+  }
+}
+@media (max-width: 365px) {
+  .contact div.right {
+    height: 400px;
+    width: 330px;
+    min-width: 330px !important;
+  }
+  .contact .right .input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 340px) {
+  section.contact {
+    padding: 100px 5px;
+  }
+  .contact div.right {
+    width: 300px;
+    min-width: 300px !important;
+  }
+}

@@ -1,0 +1,206 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+section.portfolio {
+  @apply px-[200px];
+}
+.portfolio > .heading {
+  @apply mb-[50px];
+}
+.portfolio .container {
+  @apply flex flex-col gap-5;
+}
+.portfolio .project {
+  @apply flex items-center justify-between gap-[50px];
+}
+.portfolio .project div {
+  @apply w-6/12;
+}
+.portfolio .project:nth-child(3) .card {
+  @apply flex items-center;
+  justify-content: start;
+}
+.portfolio .project:nth-child(3) .card img {
+  @apply w-[90%] h-[90%];
+}
+.portfolio .card {
+  @apply h-[350px] max-w-[400px] min-w-[400px] overflow-hidden rounded-xl;
+}
+.portfolio .card img {
+  @apply w-full h-full rounded-lg;
+}
+.portfolio .details {
+  @apply flex flex-col gap-10 px-0 py-5;
+  justify-content: start;
+  align-items: start;
+}
+.portfolio .details div {
+  @apply w-full;
+}
+.portfolio .details .text .heading {
+  @apply mb-4;
+}
+.portfolio .details .tags {
+  @apply flex items-center flex-wrap gap-[15px];
+  justify-content: start;
+}
+.portfolio .details .tags span {
+  @apply bg-[#cecece] text-sm font-semibold px-[5px] py-0.5 rounded-[5px];
+}
+.portfolio .details p {
+  @apply leading-[1.3];
+}
+.portfolio .details p a {
+  @apply no-underline text-[rgb(100,100,208)];
+}
+.portfolio .details .links {
+  @apply flex content-center gap-5;
+  justify-content: start;
+}
+.portfolio .details .links * {
+  @apply no-underline text-[color:var(--text)] h-full;
+}
+.portfolio .details .links a.live {
+  @apply font-semibold mt-[7px] hover:text-[color:var(--accent)];
+}
+.portfolio .details .links i {
+  @apply text-[32px];
+}
+@media (min-width: 1290px) {
+  .portfolio .project div h3 {
+    @apply text-2xl;
+  }
+  .portfolio .project div p {
+    @apply text-xl;
+  }
+  .portfolio .project .tags span {
+    @apply text-lg;
+  }
+}
+@media (min-width: 1310px) {
+  section.portfolio {
+    @apply px-[170px];
+  }
+  .portfolio .card {
+    @apply h-[400px] max-w-[450px] min-w-[450px];
+  }
+}
+@media (min-width: 1360px) {
+  section.portfolio {
+    @apply max-w-[1360px] mx-auto my-0;
+  }
+}
+@media (max-width: 1200px) {
+  section.portfolio {
+    @apply px-[10%];
+  }
+}
+@media (max-width: 1000px) {
+  section.portfolio {
+    @apply px-[5%];
+  }
+}
+@media (max-width: 930px) {
+  section.portfolio {
+    @apply px-10;
+  }
+}
+@media (max-width: 885px) {
+  .portfolio .card {
+    @apply h-[300px] max-w-[350px] min-w-[350px];
+  }
+}
+@media (max-width: 785px) {
+  section.portfolio {
+    @apply px-[30px];
+  }
+}
+@media (max-width: 768px) {
+  section.portfolio {
+    @apply px-5;
+  }
+  .portfolio > .heading {
+    @apply flex flex-col justify-center items-center text-center;
+  }
+  .portfolio > .heading p {
+    @apply w-4/5;
+  }
+  .portfolio .container {
+    @apply items-center;
+  }
+  .portfolio .project {
+    @apply flex-col-reverse gap-[5px] max-w-[400px] mb-[30px];
+  }
+  .portfolio .project:not(:last-child) {
+    @apply border-b-[color:var(--text)] pb-[30px] border-b-2 border-solid;
+  }
+  .portfolio .project:nth-child(2) {
+    @apply flex-col;
+  }
+  .portfolio .card {
+    @apply h-[350px] max-w-[400px] min-w-[400px];
+  }
+  .portfolio .project:nth-child(3) .card {
+    @apply justify-center;
+  }
+  .portfolio .project:nth-child(3) .card img {
+    @apply w-full;
+  }
+  .portfolio .details {
+    @apply min-w-[400px];
+  }
+  .portfolio .details h3 {
+    @apply text-2xl;
+  }
+}
+@media (max-width: 540px) {
+  .portfolio > .heading p {
+    @apply w-[90%];
+  }
+}
+@media (max-width: 485px) {
+  .portfolio > .heading p {
+    @apply w-full;
+  }
+  section.portfolio {
+    @apply px-2.5;
+  }
+}
+@media (max-width: 435px) {
+  section.portfolio {
+    @apply px-[5px];
+  }
+  .portfolio .project {
+    @apply max-w-[380px];
+  }
+  .portfolio .card {
+    @apply h-[330px] min-w-[380px];
+  }
+  .portfolio .details {
+    @apply min-w-[380px];
+  }
+}
+@media (max-width: 415px) {
+  .portfolio .project {
+    @apply max-w-[330px];
+  }
+  .portfolio .card {
+    @apply h-[280px] min-w-[330px];
+  }
+  .portfolio .details {
+    @apply min-w-[330px];
+  }
+}
+@media (max-width: 350px) {
+  .portfolio .project {
+    @apply max-w-[310px];
+  }
+  .portfolio .card {
+    @apply h-[260px] min-w-[310px];
+  }
+  .portfolio .details {
+    @apply min-w-[310px];
+  }
+}

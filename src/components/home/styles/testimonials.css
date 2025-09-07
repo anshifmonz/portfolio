@@ -1,0 +1,92 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+section.testimonials {
+  @apply flex flex-col justify-center items-center gap-8 text-center px-20 py-[90px];
+}
+.testimonials p {
+  @apply text-[22px] font-semibold w-[70%] text-[color:var(--text)];
+}
+.testimonials .profile {
+  @apply flex justify-center items-center gap-[50px];
+  text-align-last: left;
+}
+.testimonials .profile .details {
+  @apply flex justify-center items-center gap-2.5 pr-10 border-r-[2.5px] border-r-black border-solid;
+}
+.testimonials .logo h3 {
+  font-family: 'Jaini Purva';
+}
+.testimonials .profile .details span {
+  @apply text-[13px];
+}
+@media (min-width: 1440px) {
+  section.testimonials {
+    @apply max-w-[1440px] mx-auto my-0;
+  }
+}
+@media (min-width: 1250px) {
+  .testimonials p {
+    @apply text-[26px];
+  }
+  .testimonials .profile .details h4 {
+    @apply text-lg;
+  }
+  .testimonials .profile .details span {
+    @apply text-base;
+  }
+}
+@media (max-width: 970px) {
+  .testimonials p {
+    @apply w-4/5;
+  }
+}
+@media (max-width: 820px) {
+  .testimonials p {
+    @apply w-[90%];
+  }
+  section.testimonials {
+    @apply px-[60px] py-[90px];
+  }
+}
+@media (max-width: 715px) {
+  .testimonials p {
+    @apply w-full;
+  }
+}
+@media (max-width: 645px) {
+  section.testimonials {
+    @apply px-[30px] py-[90px];
+  }
+}
+@media (max-width: 590px) {
+  section.testimonials {
+    @apply px-2.5 py-[90px];
+  }
+}
+@media (max-width: 544px) {
+  .testimonials p {
+    @apply text-[1.2rem];
+  }
+}
+@media (max-width: 470px) {
+  .testimonials .profile {
+    @apply gap-[30px];
+  }
+  .testimonials .profile .details {
+    @apply pr-[30px];
+  }
+}
+@media (max-width: 410px) {
+  .testimonials p {
+    @apply text-[1.1rem];
+  }
+  .testimonials .profile {
+    @apply gap-5;
+  }
+  .testimonials .profile .details {
+    @apply pr-5;
+  }
+}
