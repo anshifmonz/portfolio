@@ -10,7 +10,7 @@ section.faq {
   @apply w-full items-start;
 }
 .faq .heading span {
-  @apply font-semibold text-[color:var(--accent)];
+  @apply font-semibold text-accent;
 }
 .faq .heading h2 {
   @apply text-[40px] leading-[1.2] -mt-1.5;
@@ -25,11 +25,14 @@ section.faq {
   @apply mb-2.5;
 }
 .faq .question {
-  @apply w-full bg-[color:var(--card-background)] text-[color:var(--text)] text-left cursor-pointer text-[1.2rem] p-[15px] rounded-[5px] border-[none] hover:bg-[#d4caf3] font-[900];
+  @apply w-full bg-card text-foreground text-left cursor-pointer text-[1.2rem] p-[15px] rounded-[5px] border-[none] hover:bg-[#d4caf3] font-[900];
   outline: none;
 }
+.faq p.question {
+  @apply font-bold;
+}
 .faq .answer {
-  @apply border border-[color:var(--accent)] hidden text-[1.1rem] mt-[5px] p-[15px] rounded-[5px] border-solid;
+  @apply border border-accent hidden text-[1.1rem] mt-[5px] p-[15px] rounded-[5px] border-solid;
 }
 .faq .answer.visible {
   @apply block;

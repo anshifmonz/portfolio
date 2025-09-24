@@ -11,23 +11,10 @@
   @apply text-5xl -ml-0.5 mr-0 -mt-1.5 -mb-2 font-[700];
 }
 #hero .left h3 {
-  @apply text-[2rem] text-[color:var(--accent)] -ml-px mr-0 mt-0 mb-[15px];
+  @apply text-[2rem] text-accent -ml-px mr-0 mt-0 mb-[15px];
 }
 #hero .left p {
-  @apply mt-2;
-}
-#hero .left > #btn-div {
-  @apply inline-flex justify-between w-[275px] h-[38px] mt-5;
-}
-#hero .left button {
-  @apply w-[120px] h-full transition-[0.3s] border-[color:var(--accent)] text-sm font-semibold tracking-[1px] cursor-pointer rounded-lg border-2 border-solid;
-  border-radius: 8px;
-}
-.hire {
-  @apply bg-transparent text-[color:var(--accent)] transition-[0.3s] hover:bg-[color:var(--accent)] hover:text-[color:var(--accent-text)];
-}
-.talk {
-  @apply bg-[color:var(--accent)] text-[color:var(--accent-text)] hover:bg-transparent hover:text-[color:var(--accent)];
+  @apply -mt-4;
 }
 #hero .right {
   @apply flex items-center justify-center w-fit;
@@ -42,7 +29,7 @@
   @apply flex items-center justify-around w-[410px] h-[410px] bg-transparent z-[1] m-0;
 }
 .circle-b {
-  @apply w-[370px] h-[370px] bg-transparent overflow-hidden z-[2] shadow-[inset_0px_0px_15px_10px_var(--accent),0px_0px_30px_10px_var(--accent)] bg-[url('../../../../public/assets/img/profile.png')] bg-cover bg-[calc(50%_+_20px)_center] bg-no-repeat border-8 border-solid border-[rgba(255,255,255,0.7)];
+  @apply w-[370px] h-[370px] bg-transparent overflow-hidden z-[2] shadow-[inset_0px_0px_15px_10px_var(--accent-hex),0px_0px_30px_10px_var(--accent-hex)] bg-[url('../../../../public/assets/img/profile.png')] bg-cover bg-[calc(50%_+_20px)_center] bg-no-repeat border-8 border-solid border-[rgba(255,255,255,0.7)];
 }
 @media (min-width: 1440px) {
   #hero {

@@ -1,289 +1,194 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
 section.contact {
-  display: flex;
-  justify-content: space-between;
-  gap: 100px;
-  align-items: center;
-  padding: 80px;
+  @apply flex justify-between gap-[100px] items-center p-20;
 }
-
 .contact .left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @apply flex flex-col justify-between h-[350px] w-[450px];
   align-items: start;
-  height: 350px;
-  width: 450px;
 }
 .contact .heading {
-  text-align: start;
+  @apply text-start;
 }
 .contact .heading span {
-  font-weight: 600;
-  color: var(--accent);
+  @apply font-semibold;
+  @apply text-accent;
 }
 .contact .heading h2 {
-  margin-top: -6px;
-  font-size: 40px;
-  line-height: 1.2;
+  @apply text-[40px] leading-[1.2] -mt-1.5;
 }
 .contact > div p {
-  font-size: 18px;
-  font-weight: 500;
+  @apply text-xl font-medium;
 }
 .contact .promises {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  @apply flex flex-col gap-2.5;
 }
 .contact .promises div {
-  display: flex;
+  @apply flex items-center gap-2.5;
   justify-content: start;
-  align-items: center;
-  gap: 10px;
 }
 .contact .promises span {
-  color: var(--body-text);
-  font-weight: 600;
+  @apply text-muted-foreground font-medium;
 }
 .contact .promises svg,
 .contact .promises path {
-  min-height: 20px !important;
-  min-width: 20px !important;
-  max-height: 20px !important;
-  max-width: 20px !important;
-  fill: green;
+  @apply min-h-[20px] min-w-[20px] max-h-5 max-w-[20px] fill-[green];
 }
 .contact .social-icons {
-  margin-top: 0;
+  @apply mt-0;
 }
-
 .contact div.right {
-  height: 350px;
-  width: 450px;
-  min-width: 420px !important;
-  background-color: var(--card-background);
-  padding: 16px;
-  border-radius: 24px;
+  @apply h-[350px] w-[450px] min-w-[420px] bg-card p-4 rounded-3xl;
 }
 .contact form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
-  height: 100%;
+  @apply flex flex-col justify-center gap-2.5 h-full;
 }
 .contact .right .input {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  align-items: center;
+  @apply flex justify-center gap-2.5 items-center;
 }
 .contact form > .input-container {
-  flex: 1;
+  @apply flex-1;
 }
 .input-container {
-  position: relative;
-  width: 100%;
+  @apply relative w-full;
 }
 .contact input {
-  flex-grow: 1;
-  height: 50px;
-  border: none;
-  border-radius: 16px;
+  @apply grow h-[50px] pl-2.5 rounded-2xl border-[none];
   outline: none;
-  padding-left: 10px;
 }
 .contact textarea {
-  border: none;
+  @apply resize-none h-full p-2.5 rounded-2xl border-[none];
   outline: none;
-  resize: none;
-  border-radius: 16px;
-  padding: 10px;
-  height: 100%;
 }
 .floating-input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  @apply w-full border rounded p-3 border-solid border-[#ccc];
   outline: none;
 }
 .floating-placeholder {
-  top: 0;
-  left: 11px;
-  font-size: 0.8em;
-  color: var(--body-text);
+  @apply text-[0.8em] text-[color:var(--body-text)] left-[11px] top-0;
   background: linear-gradient(to bottom, #ded0f3 50%, #fff 50%);
-}
-section#contact label.floating-placeholder.textarea {
-  top: 9% !important;
 }
 .floating-input:focus + .floating-placeholder,
 .floating-input:not(:placeholder-shown) + .floating-placeholder {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  color: #aaa;
-  transition: all 0.3s ease;
-  pointer-events: none;
+  @apply absolute -translate-y-2/4 text-[#aaa] transition-all duration-300 ease-linear pointer-events-none left-3 top-2/4;
   background: transparent;
 }
-.contact button {
-  height: 50px;
-  border-radius: 100px;
-  border: none;
-  font-size: 20px;
-  font-weight: 500;
-  color: var(--accent-text);
-  background-color: var(--accent);
-  border: 2px solid var(--accent);
-  cursor: pointer;
-  transition: all 0.3s;
+section#contact label.floating-placeholder.textarea {
+  @apply top-[9%];
 }
-.contact button:hover {
-  background-color: transparent;
-  color: var(--accent);
+.success {
+  @apply fixed hidden justify-between items-center gap-[15px] bg-[color:var(--card)] z-[200] w-fit text-center px-[18px] py-4 rounded-lg right-[2vw] bottom-[10vh];
+  @apply bg-card;
 }
-
-.fixed .success,
-.fixed .fail {
-  position: fixed;
-  bottom: 10vh;
-  right: 2vw;
-  display: none;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
-  background-color: var(--card-background);
-  border-radius: 8px;
-  z-index: 200;
-  padding: 16px 18px;
-  width: fit-content;
-  text-align: center;
+.fail {
+  @apply fixed hidden justify-between items-center gap-[15px] bg-[color:var(--card)] z-[200] w-fit text-center px-[18px] py-4 rounded-lg right-[2vw] bottom-[10vh];
+  @apply bg-card;
 }
-.fixed .success *,
-.fixed .fail * {
-  color: var(--text);
+.success *,
+.fail * {
+  @apply text-[color:var(--text)];
 }
-.fixed .success svg,
-.fixed .fail svg {
-  height: 40px;
-  width: 40px;
-  font-weight: 600;
+.success svg,
+.fail svg {
+  @apply h-10 w-10 font-semibold;
 }
-
 @media (min-width: 1440px) {
   section.contact {
-    width: 1440px;
-    max-width: 1440px;
-    margin: 0 auto;
+    @apply w-[1440px] max-w-[1440px] mx-auto my-0;
   }
 }
 @media (min-width: 1300px) {
   section.contact div.right {
-    width: 500px;
-    height: 400px;
+    @apply w-[500px] h-[400px];
   }
   section.contact div.left {
-    width: 500px;
-    height: 400px;
+    @apply w-[500px] h-[400px];
   }
   section.contact div.left h2 {
-    font-size: 2.8rem;
+    @apply text-[2.8rem];
   }
   section.contact div.left p {
-    font-size: 1.4rem;
+    @apply text-[1.4rem];
   }
 }
 @media (min-width: 1250px) {
   section.contact div.right {
-    min-width: 470px !important;
+    @apply min-w-[470px];
   }
 }
 @media (max-width: 1070px) {
   section.contact {
-    gap: 70px;
-    padding: 100px 50px;
+    @apply gap-[70px] px-[50px] py-[100px];
   }
 }
 @media (max-width: 970px) {
   section.contact {
-    gap: 50px;
+    @apply gap-[50px];
   }
 }
 @media (max-width: 930px) {
   section.contact {
-    gap: 30px;
-    padding: 100px 30px;
+    @apply gap-[30px] px-[30px] py-[100px];
   }
 }
 @media (max-width: 820px) {
   section.contact {
-    gap: 20px;
-    padding: 100px 20px;
+    @apply gap-5 px-5 py-[100px];
   }
 }
 @media (max-width: 800px) {
   .contact div.right {
-    min-width: 390px !important;
+    @apply min-w-[390px];
   }
 }
 @media (max-width: 768px) {
   section.contact {
-    flex-direction: column;
-    padding: 100px 10px;
+    @apply flex-col px-2.5 py-[100px];
   }
   .contact .left {
-    align-items: center;
-    text-align: center;
+    @apply items-center text-center;
   }
   .contact .heading {
-    text-align: center;
+    @apply text-center;
   }
   .contact div.right {
-    min-width: 420px !important;
+    @apply min-w-[420px];
   }
   .contact .promises {
-    align-self: start;
-    padding-left: 20px;
+    @apply pl-5;
   }
 }
 @media (max-width: 490px) {
   .contact div.right {
-    width: 390px;
-    min-width: 390px !important;
+    @apply w-[390px] min-w-[390px];
   }
 }
 @media (max-width: 430px) {
   .contact .left {
-    width: 100%;
+    @apply w-full;
   }
 }
 @media (max-width: 410px) {
   .contact div.right {
-    width: 350px;
-    min-width: 350px !important;
+    @apply w-[350px] min-w-[350px];
   }
 }
 @media (max-width: 365px) {
   .contact div.right {
-    height: 400px;
-    width: 330px;
-    min-width: 330px !important;
+    @apply h-[400px] w-[330px] min-w-[330px];
   }
   .contact .right .input {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    @apply flex flex-col gap-2.5;
   }
 }
 @media (max-width: 340px) {
   section.contact {
-    padding: 100px 5px;
+    @apply px-[5px] py-[100px];
   }
   .contact div.right {
-    width: 300px;
-    min-width: 300px !important;
+    @apply w-[300px] min-w-[300px];
   }
 }

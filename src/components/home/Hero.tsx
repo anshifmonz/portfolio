@@ -1,5 +1,6 @@
 import './styles/hero.css';
 import Link from 'next/link';
+import { ActionButtonsGroup } from '../shared/ActionButtons';
 
 const Hero: React.FC = () => {
   return (
@@ -9,19 +10,25 @@ const Hero: React.FC = () => {
           <span>Hey, I am</span>
           <h1 id="name">Muhammed Anshif</h1>
           <h3 id="role">Full Stack Developer</h3>
-          <p id="desc">
+          <p id="desc" className="mb-8">
             I am passionate about crafting innovative web solutions that empower businesses and
             elevate user experiences.
           </p>
         </div>
-        <div id="btn-div">
-          <Link href="#portfolio">
-            <button className="hire">View Projects</button>
-          </Link>
-          <Link href="#contact">
-            <button className="talk">Let&apos;s Talk</button>
-          </Link>
-        </div>
+        <ActionButtonsGroup
+          buttons={[
+            {
+              name: 'View Projects',
+              href: '#portfolio',
+              variant: 'hire'
+            },
+            {
+              name: "Let's Talk",
+              href: '#contact',
+              variant: 'talk'
+            }
+          ]}
+        />
         <div className="social-icons">
           <Link
             href="https://www.instagram.com/anshifmonz_/"

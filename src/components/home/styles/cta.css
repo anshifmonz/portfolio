@@ -10,10 +10,6 @@ section.cta {
 .cta .heading p {
   @apply text-xl font-medium mb-5;
 }
-.cta button {
-  @apply w-fit h-fit text-sm font-semibold tracking-[1px] text-[color:var(--accent-text)] border-[color:var(--accent)] bg-[color:var(--accent)] cursor-pointer transition-[0.3s] px-3.5 py-3 rounded-lg border-2 border-solid hover:bg-transparent hover:text-[color:var(--accent)];
-  border-radius: 8px;
-}
 @media (min-width: 1440px) {
   section.cta {
     @apply max-w-[1440px] mb-0 mx-auto;
@@ -74,6 +70,9 @@ section.cta {
   }
   .cta .heading h2 {
     @apply w-full text-[2.5rem];
+  }
+  .cta .heading div {
+    @apply flex flex-col justify-center items-center;
   }
   .cta .heading p {
     @apply mb-[30px] px-[10%] py-0;

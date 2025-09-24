@@ -1,5 +1,5 @@
 import './styles/cta.css';
-import Link from 'next/link';
+import { ActionButton } from 'components/shared/ActionButtons';
 
 export default function Cta() {
   return (
@@ -11,9 +11,12 @@ export default function Cta() {
             Ready to elevate your online presence? Reach out, and let’s discuss how I can help turn
             your ideas into impactful, high-performing web solutions.
           </p>
-          <Link href="#contact">
-            <button>Let’s Connect</button>
-          </Link>
+          <ActionButton
+            name="Let’s Connect"
+            href="#contact"
+            variant="talk"
+            className="px-3.5 py-3 h-"
+          />
         </div>
       </div>
     </section>

@@ -16,7 +16,7 @@ section.services {
   @apply grid grid-cols-[repeat(3,1fr)] grid-rows-[repeat(2,1fr)] gap-5 p-0;
 }
 .services .container .card {
-  @apply flex flex-col items-center justify-start text-center border-[color:var(--accent-border)] bg-[color:var(--card-background)] px-[18px] py-7 rounded-xl border-2 border-solid;
+  @apply flex flex-col items-center justify-start text-center border-border bg-card px-[18px] py-7 rounded-xl border-2 border-solid;
 }
 .services .card .icon {
   @apply h-[100px];
@@ -144,7 +144,7 @@ section.services {
     @apply grid-cols-[1fr];
   }
   .services .container .card {
-    @apply w-[350px] px-[18px] py-7;
+    @apply w-[350px] px-[18px] py-7 mx-auto;
   }
 }
 @media (max-width: 425px) {

@@ -3,6 +3,7 @@
 import { useState, useEffect, FormEvent } from 'react';
 import './styles/contact.css';
 import Link from 'next/link';
+import { ActionButton } from 'components/shared/ActionButtons';
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -189,7 +190,13 @@ export default function Contact() {
               ></textarea>
               <label className="floating-placeholder textarea">Message</label>
             </div>
-            <button>Submit</button>
+            <ActionButton
+              href=""
+              name="Submit"
+              variant="talk"
+              type="submit"
+              className="px-3.5 py-3 h-min w-full rounded-3xl"
+            />
           </form>
         </div>
       </section>

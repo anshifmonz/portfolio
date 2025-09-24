@@ -118,13 +118,13 @@ html {
 body {
   color: var(--text);
   overflow-x: hidden;
-  background-color: var(--background);
+  @apply bg-background;
 }
 body::-webkit-scrollbar {
   width: 12px;
 }
 body::-webkit-scrollbar-track {
-  background-color: var(--background);
+  @apply bg-background;
 }
 body::-webkit-scrollbar-thumb {
   background-color: var(--primary);
