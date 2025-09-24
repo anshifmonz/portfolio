@@ -5,17 +5,58 @@
 
 @layer base {
   :root {
-    --text: #0f051f;
+    --accent-hex: #c01b9a;
     --body-text: rgba(25, 24, 37, 0.7);
-    --background: #ede4fb;
-    --primary: #461281;
-    --secondary: #ea79ec;
-    --accent: #c01b9a;
-    --accent-text: #ffffff;
-    --accent-border: rgba(192, 27, 154, 0.1);
     --nav-border: rgba(253, 0, 0, 0.1);
-    --card-background: #d7cfee;
     --icons: #010101;
+
+    --radius: 0.5rem;
+
+    --background: 267 67% 94%; /* --background #ede4fb */
+    --foreground: 270 71% 9%; /* --text #0f051f */
+
+    --card: 264 40% 88%; /* #d7cfee */
+    --card-foreground: 270 71% 9%;
+
+    --popover: 264 40% 88%;
+    --popover-foreground: 270 71% 9%;
+
+    --primary: 273 69% 27%; /* --primary #461281 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 300 79% 70%; /* --secondary #ea79ec */
+    --secondary-foreground: 270 71% 9%;
+
+    --muted: 267 67% 94%;
+    --muted-foreground: 235 26% 35%; /* body text rgba(25, 24, 37, 0.7) */
+
+    --accent: 314 75% 43%; /* #c01b9a */
+    --accent-foreground: 0 0% 100%; /* --accent-text: #ffffff; */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 314 75% 43% / 0.1; /* --accent-border rgba(192, 27, 154, 0.1) */
+    --input: 264 40% 85%;
+    --ring: 314 75% 43%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
 
     --font-inter: 'Inter', sans-serif;
     --font-oxanium: 'Oxanium', sans-serif;
@@ -42,20 +83,16 @@ html {
 }
 
 body {
-  color: var(--text);
-  overflow-x: hidden;
-  background-color: var(--background);
+  @apply text-foreground overflow-x-hidden bg-background;
 }
 body::-webkit-scrollbar {
   width: 12px;
 }
 body::-webkit-scrollbar-track {
-  background-color: var(--background);
+  @apply bg-background;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--primary);
-  border-radius: 6px;
-  border: 3px solid var(--background);
+  @apply bg-primary border-4 border-background;
 }
 
 main {
@@ -68,7 +105,7 @@ section > .heading {
 }
 section > .heading span {
   font-weight: 600;
-  color: var(--accent);
+  @apply text-accent;
 }
 section > .heading h2 {
   margin-top: -6px;
